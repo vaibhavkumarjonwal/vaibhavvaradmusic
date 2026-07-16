@@ -3,13 +3,15 @@ import cover1 from "@/assets/TumAayeHoArtwork-1600px_Final2.png";
 import artist1 from "@/assets/virus.jpg";
 import artist2 from "@/assets/varad.jpeg";
 import mp3 from "@/assets/Sample.mp3";
+import Logo from "@/assets/Vector.svg?react";
+
 export const site = {
   brand: {
     name: "vaibhavvaradmusic",
     tagline: "Independent Music Duo",
     subtitle: "Creating Indie Music.",
     heroImage: hero,
-    logo: "VV",
+    //logo: logo,
   },
   releaseCountdown: {
     enabled: true,

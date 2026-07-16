@@ -69,7 +69,10 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+
+
 :root {
+  
   --radius: 1rem;
   --background: oklch(0.09 0.005 300);
   --foreground: oklch(0.98 0 0);
@@ -109,6 +112,7 @@
 
 /* Warm light theme — inspired by the golden / marigold artist DP */
 .light {
+  --brand: #FFB700;
   --background: oklch(0.975 0.025 85);
   --foreground: oklch(0.22 0.05 55);
   --card: oklch(0.98 0.03 82);
@@ -133,6 +137,7 @@
 }
 
 .dark {
+  --brand: #ffffff;
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
@@ -266,3 +271,4 @@
     letter-spacing: -0.02em;
   }
 }
+

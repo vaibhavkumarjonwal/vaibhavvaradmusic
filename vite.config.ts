@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [
@@ -12,6 +13,7 @@ export default defineConfig({
     nitro(),
     react(),
     tailwindcss(),
+     svgr(),
   ],
   resolve: {
     tsconfigPaths: true,

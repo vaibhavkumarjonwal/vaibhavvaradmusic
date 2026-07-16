@@ -80,7 +80,7 @@ export function AudioPreview({ src, id, variant = "pill", className = "" }: Prop
 
   if (variant === "overlay") {
     return (
-      <div className={`relative flex h-full w-full items-center justify-center ${className}`}>
+    <div className={`relative flex h-full w-full items-center justify-center ${className}`}>
         <button
           onClick={toggle}
           aria-label={playing ? "Pause preview" : "Play 30 second preview"}

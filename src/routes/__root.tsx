@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/vector.svg", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,
@@ -98,6 +98,8 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <title>TEST TITLE</title>
+        <link rel="icon" href="/Vector.svg" type="image/svg+xml" />
         <HeadContent />
       </head>
       <body>

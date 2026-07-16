@@ -14,7 +14,7 @@ import { CounterStat } from "@/components/CounterStat";
 import { AudioPreview } from "@/components/AudioPreview";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { HeroCountdown } from "@/components/CountdownBanner";
-
+import Logo from "@/assets/Vector.svg?react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -46,7 +46,7 @@ function Index() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background">
           <div className="text-center">
             <div className="font-display text-5xl font-black text-gradient animate-pulse-glow">
-              {site.brand.logo}
+              <Logo className="mx-auto h-20 w-auto text-primary animate-pulse-glow" />
             </div>
             <div className="mt-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">Loading</div>
           </div>
@@ -88,9 +88,9 @@ function Nav() {
     <header className="fixed inset-x-0 top-0 z-40">
       <div className="mx-auto max-w-7xl px-4 py-4">
         <nav className="glass flex items-center justify-between rounded-full px-5 py-2.5">
-          <a href="#top" className="font-display text-sm font-black tracking-tight">
-            <span className="text-gradient">{site.brand.logo}</span>
-          </a>
+     <a href="#top" className="flex items-center">
+      <Logo className="h-10 w-auto text-primary" />
+    </a>
           <div className="hidden gap-6 md:flex">
             {links.map(([label, href]) => (
               <a key={href} href={href} className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition hover:text-foreground">
@@ -232,15 +232,16 @@ function LatestRelease() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative aspect-square overflow-hidden rounded-2xl glow-purple"
-        >
+          className="relative aspect-square overflow-hidden rounded-2xl glow-purple">
           <img src={r.cover} alt={r.title} className="h-full w-full object-cover" width={800} height={800} loading="lazy" />
+             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 to-transparent">
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <AudioPreview
             src={r.previewUrl}
             id={`latest-${r.title}`}
             className="absolute bottom-5 left-5"
           />
+          </div>
         </motion.div>
         <div className="flex flex-col justify-center">
           <div className="text-xs uppercase tracking-widest text-muted-foreground">{r.date}</div>
@@ -785,7 +786,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
           <div>
-            <div className="font-display text-3xl font-black text-gradient">{site.brand.logo}</div>
+            <div className="font-display text-3xl font-black text-gradient"><Logo className="h-10 w-auto text-primary" /></div>
             <div className="mt-2 text-sm text-muted-foreground">{site.brand.name} · {site.brand.subtitle}</div>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-muted-foreground">
