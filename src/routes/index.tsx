@@ -114,7 +114,7 @@ function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
       <div className="absolute inset-0">
-        <img src={site.brand.heroImage} alt="" className="h-full w-full object-cover opacity-65" />
+        <img src={site.brand.heroImage} alt="" className="h-full w-full object-cover object-[center_36%] opacity-65" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/28 to-background/45 dark:from-background/15 dark:via-background/35 dark:to-background/55" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.62_0.24_300/0.18),transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,oklch(0.82_0.15_210/0.1),transparent_60%)]" />
