@@ -1,15 +1,13 @@
 import hero from "@/assets/herodp.png";
-import cover1 from "@/assets/cover1.jpg";
-import cover2 from "@/assets/cover2.jpg";
-import cover3 from "@/assets/cover3.jpg";
-import artist1 from "@/assets/artist1.jpg";
-import artist2 from "@/assets/artist2.jpg";
-
+import cover1 from "@/assets/TumAayeHoArtwork-1600px_Final2.png";
+import artist1 from "@/assets/virus.jpg";
+import artist2 from "@/assets/varad.jpeg";
+import mp3 from "@/assets/Sample.mp3";
 export const site = {
   brand: {
     name: "vaibhavvaradmusic",
     tagline: "Independent Music Duo",
-    subtitle: "Creating cinematic Indian Pop music.",
+    subtitle: "Creating Indie Music.",
     heroImage: hero,
     logo: "VV",
   },
@@ -20,23 +18,23 @@ export const site = {
     // ISO 8601 with timezone — 20 July 2026, 00:00 IST
     date: "2026-07-20T00:00:00+05:30",
     cta: { label: "Pre-save", href: "#latest" },
-    liveLabel: "Out Now",
+    liveLabel: "Coming Soon",
   },
   hero: {
     ctas: [
       { label: "Listen Now", href: "#latest", icon: "play", variant: "primary" as const },
       { label: "Latest Release", href: "#latest", icon: "music", variant: "ghost" as const },
-      { label: "Instagram", href: "https://instagram.com", icon: "instagram", variant: "ghost" as const },
-      { label: "YouTube", href: "https://youtube.com", icon: "youtube", variant: "ghost" as const },
+      { label: "Instagram", href: "https://www.instagram.com/vaibhavvaradmusic", icon: "instagram", variant: "ghost" as const },
+      { label: "YouTube", href: "https://www.youtube.com/@VaibhavVaradMusic", icon: "youtube", variant: "ghost" as const },
       { label: "Spotify", href: "https://spotify.com", icon: "spotify", variant: "ghost" as const },
     ],
   },
   latest: {
-    title: "Neon Monsoon",
+    title: "Tum Aaye Ho",
     date: "2026 · Single",
     cover: cover1,
     description: "The lead single from our upcoming EP — a cinematic blend of Indian pop and electronic textures.",
-    previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    previewUrl: mp3,
     links: [
       { name: "Spotify", href: "#" },
       { name: "Apple Music", href: "#" },
@@ -51,49 +49,53 @@ export const site = {
   },
   releases: [
     { title: "Neon Monsoon", cover: cover1, genre: "Indian Pop", duration: "3:42", date: "2026", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
-    { title: "Midnight Signal", cover: cover2, genre: "Electronic", duration: "4:11", date: "2025", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-    { title: "Skyline Dreams", cover: cover3, genre: "Cinematic Pop", duration: "3:28", date: "2025", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
-    { title: "Velvet Hours", cover: cover1, genre: "Alt Pop", duration: "3:55", date: "2024", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
-    { title: "Paper Planes", cover: cover2, genre: "Indie", duration: "4:02", date: "2024", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
-    { title: "Static Bloom", cover: cover3, genre: "Electronic", duration: "3:37", date: "2023", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+   // { title: "Midnight Signal", cover: cover2, genre: "Electronic", duration: "4:11", date: "2025", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+    //{ title: "Skyline Dreams", cover: cover3, genre: "Cinematic Pop", duration: "3:28", date: "2025", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+    //{ title: "Velvet Hours", cover: cover1, genre: "Alt Pop", duration: "3:55", date: "2024", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+    //{ title: "Paper Planes", cover: cover2, genre: "Indie", duration: "4:02", date: "2024", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+    //{ title: "Static Bloom", cover: cover3, genre: "Electronic", duration: "3:37", date: "2023", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
   ],
   videos: [
-    { title: "Neon Monsoon — Official MV", type: "Music Video", id: "dQw4w9WgXcQ" },
-    { title: "Midnight Signal — Lyric Video", type: "Lyric Video", id: "dQw4w9WgXcQ" },
-    { title: "Live at Mumbai Arena", type: "Live", id: "dQw4w9WgXcQ" },
-    { title: "Studio Sessions", type: "BTS", id: "dQw4w9WgXcQ" },
+    { title: "Glimpse of Tum Aaye Ho", type: "Youtube Short", id: "3RsscziFC0E" },
+    //{ title: "Midnight Signal — Lyric Video", type: "Lyric Video", id: "dQw4w9WgXcQ" },
+    //{ title: "Live at Mumbai Arena", type: "Live", id: "dQw4w9WgXcQ" },
+    //{ title: "Studio Sessions", type: "BTS", id: "dQw4w9WgXcQ" },
   ],
   about: {
     image: hero,
     paragraphs: [
-      "AURORA//SIGNAL is an independent Indian music duo weaving cinematic pop with electronic soundscapes and roots-inspired melodies.",
-      "Formed in 2022 between Mumbai and Bangalore, the duo has been quietly building a distinct voice — one that feels equally at home in a headphone and on a festival main stage.",
-      "Influenced by The Weeknd, Coldplay, Prateek Kuhad and A.R. Rahman, they craft songs designed for the modern listener while carrying the emotional weight of a film score.",
+      "vaibhavvaradmusic is an independent Indian music duo weaving cinematic pop with classical touch and roots-inspired melodies.",
+      "Formed in 2026, the duo has been quietly building a distinct voice — one that feels equally at home in a headphone.",
+      "Influenced by The Amit Trivedi, Kaavish, Prateek Kuhad and A.R. Rahman, they craft songs designed for the modern listener while carrying the emotional weight of a film score.",
     ],
     achievements: [
-      "3M+ streams across platforms",
-      "Editorial features on Spotify India & Apple Music",
-      "Sold-out debut show in Mumbai",
-      "Featured artists — NH7 Weekender",
+      //"3M+ streams across platforms",
+      //"Editorial features on Spotify India & Apple Music",
+      //"Sold-out debut show in Mumbai",
+      //"Featured artists — NH7 Weekender",
     ],
   },
   artists: [
     {
-      name: "Kabir Rao",
-      role: "Vocals · Producer",
+      name: "Vaibhav Jonwal",
+      role: "Composer · Songwriter",
       photo: artist1,
-      bio: "Multi-instrumentalist and producer. Shapes the harmonic architecture behind every track.",
-      instrument: "Fender Stratocaster",
-      fun: "Collects vintage synthesizers.",
-      socials: ["instagram", "twitter", "youtube"],
+      bio: "Lyricist and topline writer, composer and producer.",
+      instrument: "Guitar, Keyboard",
+      //fun: "Collects vintage synthesizers.",
+      artistinstagram: "https://www.instagram.com/vaibhav_vkj",
+      socials: ["instagram"
+        //,"twitter", "youtube"
+      ],
     },
     {
-      name: "Aarav Menon",
-      role: "Vocals · Songwriter",
+      name: "Varad Vyavhare",
+      role: "Vocals · Songwriter · Composer ",
       photo: artist2,
-      bio: "Lyricist and topline writer. Draws from Hindi cinema, poetry and late-night city drives.",
-      instrument: "Yamaha CP-88",
-      fun: "Can quote every Guru Dutt film verbatim.",
+      bio: ". Draws from Hindi cinema, poetry and late-night city drives.",
+      instrument: "Flute, Guitar",
+      //fun: "Can quote every Guru Dutt film verbatim.",
+      artistinstagram: "https://www.instagram.com/varadvyavharee",
       socials: ["instagram", "twitter", "youtube"],
     },
   ],
@@ -112,8 +114,8 @@ export const site = {
     { name: "Stage Plot", size: "1.4 MB" },
   ],
   contact: {
-    business: "hello@aurorasignal.in",
-    management: "mgmt@aurorasignal.in",
+    business: "varadvaibhavmusic@gmail.com",
+   // management: "enquiry@varadvaibhavmusic.in",
   },
   socials: [
     "Spotify","Apple Music","YouTube","Instagram","Facebook","Threads","TikTok",
@@ -121,7 +123,7 @@ export const site = {
     "Discord","WhatsApp","Telegram","Website","Linktree",
   ],
   merch: ["Hoodies","Caps","T-Shirts","Posters","Vinyl","CDs"],
-  gallery: [cover1, cover2, cover3, hero, artist1, artist2, cover2, cover3, cover1],
+  gallery: [cover1],
   media: [
     { source: "Rolling Stone India", title: "The new sound of Indian pop", date: "Mar 2026" },
     { source: "Homegrown", title: "AURORA//SIGNAL are quietly redefining the scene", date: "Feb 2026" },
@@ -129,11 +131,11 @@ export const site = {
     { source: "Wild City", title: "10 Indian artists to watch", date: "Dec 2025" },
   ],
   stats: [
-    { label: "Monthly Listeners", value: 248000 },
-    { label: "Total Streams", value: 3200000 },
-    { label: "Followers", value: 92000 },
-    { label: "Songs Released", value: 12 },
-    { label: "Countries Reached", value: 47 },
+    { label: "Monthly Listeners", value: "Coming Soon" },
+    { label: "Total Streams", value: "Coming Soon" },
+    { label: "Followers", value: "Coming Soon" },
+    { label: "Songs Released", value: "Coming Soon" },
+    { label: "Countries Reached", value: "Coming Soon" },
   ],
   timeline: [
     { year: "2022", title: "Formation", body: "Kabir & Aarav meet at a Mumbai session." },
@@ -143,11 +145,11 @@ export const site = {
     { year: "2026", title: "Neon Monsoon", body: "Lead single of the upcoming full-length EP." },
   ],
   faq: [
-    { q: "How can we book you for a show?", a: "Reach out via the booking form or email mgmt@aurorasignal.in with dates, venue and expected audience size." },
+    { q: "How can we book you for a show?", a: "Reach out via the booking form or email varadvaibhavmusic@gmail.com with dates, venue and expected audience size." },
     { q: "Do you take collaboration requests?", a: "Yes — send us a note through the collaboration form with links to your work." },
     { q: "Where can I stream your music?", a: "Everywhere — Spotify, Apple Music, YouTube Music, JioSaavn, Gaana, Amazon Music and more." },
-    { q: "When is the next EP releasing?", a: "The full EP follows Neon Monsoon later this year. Subscribe to the newsletter for the exact date." },
-    { q: "Do you offer merch?", a: "Merch is coming soon — join the newsletter to hear about the drop first." },
+    { q: "When is the next song releasing?", a: "The new song will be releasing later this year." },
+    //{ q: "Do you offer merch?", a: "Merch is coming soon — join the newsletter to hear about the drop first." },
   ],
 };
 

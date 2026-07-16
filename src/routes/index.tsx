@@ -114,7 +114,7 @@ function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
       <div className="absolute inset-0">
-        <img src={site.brand.heroImage} alt="" className="h-full w-full object-cover object-[center_36%] opacity-65" />
+        <img src={site.brand.heroImage} alt="" className="h-full w-full object-cover opacity-65" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/28 to-background/45 dark:from-background/15 dark:via-background/35 dark:to-background/55" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.62_0.24_300/0.18),transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,oklch(0.82_0.15_210/0.1),transparent_60%)]" />
@@ -164,10 +164,35 @@ function Hero() {
           <a href="#latest" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-foreground/10">
             <Music className="h-4 w-4" /> Latest Release
           </a>
-          <a href="#" aria-label="Instagram" className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"><Instagram className="h-4 w-4" /></a>
-          <a href="#" aria-label="YouTube" className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"><Youtube className="h-4 w-4" /></a>
-          <a href="#" aria-label="Spotify" className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"><Headphones className="h-4 w-4" /></a>
-        </motion.div>
+         <a
+  href="https://www.instagram.com/vaibhavvaradmusic"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+  className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
+>
+  <Instagram className="h-4 w-4" />
+</a>
+
+<a
+  href="https://www.youtube.com/@VaibhavVaradMusic"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+  className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
+>
+  <Youtube className="h-4 w-4" />
+</a>
+
+<a
+  href="https://spotify.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Spotify"
+  className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
+>
+  <Headphones className="h-4 w-4" />
+</a>  </motion.div>
 
       </div>
     </section>
@@ -210,14 +235,12 @@ function LatestRelease() {
           className="relative aspect-square overflow-hidden rounded-2xl glow-purple"
         >
           <img src={r.cover} alt={r.title} className="h-full w-full object-cover" width={800} height={800} loading="lazy" />
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 to-transparent">
-            <AudioPreview
-              src={r.previewUrl}
-              id={`latest-${r.title}`}
-              variant="overlay"
-              className="absolute inset-0"
-            />
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <AudioPreview
+            src={r.previewUrl}
+            id={`latest-${r.title}`}
+            className="absolute bottom-5 left-5"
+          />
         </motion.div>
         <div className="flex flex-col justify-center">
           <div className="text-xs uppercase tracking-widest text-muted-foreground">{r.date}</div>
@@ -362,23 +385,69 @@ function ArtistsSection() {
             className="glass group overflow-hidden rounded-3xl"
           >
             <div className="relative aspect-[4/5] overflow-hidden">
-              <img src={a.photo} alt={a.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <img
+                src={a.photo}
+                alt={a.name}
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <div className="text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">{a.role}</div>
-                <h3 className="mt-1 font-display text-3xl font-black">{a.name}</h3>
+                <div className="text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">
+                  {a.role}
+                </div>
+
+                <h3 className="mt-1 font-display text-3xl font-black text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]">
+                  {a.name}
+                </h3>
               </div>
             </div>
+
             <div className="space-y-4 p-6">
-              <p className="text-sm text-muted-foreground">{a.bio}</p>
+              <p className="text-sm text-muted-foreground">
+                {a.bio}
+              </p>
+
               <div className="grid gap-3 text-sm sm:grid-cols-2">
-                <div className="flex items-center gap-2"><Guitar className="h-4 w-4 shrink-0 text-[oklch(0.82_0.15_210)]" /><span className="truncate">{a.instrument}</span></div>
-                <div className="flex items-center gap-2"><Star className="h-4 w-4 shrink-0 text-[oklch(0.62_0.24_300)]" /><span className="truncate">{a.fun}</span></div>
+                <div className="flex items-center gap-2">
+                  <Guitar className="h-4 w-4 shrink-0 text-[oklch(0.82_0.15_210)]" />
+                  <span className="truncate">{a.instrument}</span>
+                </div>
+
+                {/* <div className="flex items-center gap-2">
+                  <Star className="h-4 w-4 shrink-0 text-[oklch(0.62_0.24_300)]" />
+                  <span className="truncate">{a.fun}</span>
+                </div> */}
               </div>
+
               <div className="flex gap-2">
-                <a href="#" aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 transition hover:bg-foreground/10"><Instagram className="h-4 w-4" /></a>
-                <a href="#" aria-label="Twitter" className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 transition hover:bg-foreground/10"><Twitter className="h-4 w-4" /></a>
-                <a href="#" aria-label="YouTube" className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 transition hover:bg-foreground/10"><Youtube className="h-4 w-4" /></a>
+                
+                
+                <a
+                  href={a.artistinstagram}
+                  aria-label="Instagram"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 transition hover:bg-foreground/10"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+
+                {/* <a
+                  href="#"
+                  aria-label="Twitter"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 transition hover:bg-foreground/10"
+                >
+                  <Twitter className="h-4 w-4" />
+                </a> */}
+{/* 
+                <a
+                  href="#"
+                  aria-label="YouTube"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-foreground/10 transition hover:bg-foreground/10"
+                >
+                  <Youtube className="h-4 w-4" />
+                </a> */}
               </div>
             </div>
           </motion.article>
@@ -464,7 +533,18 @@ function StatsSection() {
     <Section eyebrow="By the Numbers" title="Statistics">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {site.stats.map((s) => (
-          <CounterStat key={s.label} value={s.value} label={s.label} />
+          <div
+            key={s.label}
+            className="glass rounded-3xl p-6 text-center transition hover:scale-[1.02]"
+          >
+            <div className="font-display text-3xl font-black text-gradient">
+              {s.value}
+            </div>
+
+            <div className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
+              {s.label}
+            </div>
+          </div>
         ))}
       </div>
     </Section>
@@ -633,16 +713,16 @@ function ContactSection() {
               <div className="truncate font-semibold">{site.contact.business}</div>
             </div>
           </a>
-          <a href={`mailto:${site.contact.management}`} className="glass flex items-center gap-4 rounded-2xl p-5 transition hover:bg-foreground/5">
+          {/* <a href={`mailto:${site.contact.management}`} className="glass flex items-center gap-4 rounded-2xl p-5 transition hover:bg-foreground/5">
             <Mic2 className="h-5 w-5 shrink-0 text-[oklch(0.62_0.24_300)]" />
             <div className="min-w-0">
               <div className="text-xs uppercase tracking-widest text-muted-foreground">Management</div>
               <div className="truncate font-semibold">{site.contact.management}</div>
             </div>
-          </a>
+          </a> */}
           <div className="glass rounded-2xl p-5">
             <div className="text-xs uppercase tracking-widest text-muted-foreground">Based in</div>
-            <div className="mt-1 font-semibold">Mumbai · Bangalore, India</div>
+            <div className="mt-1 font-semibold">Kerala · Gujarat, India</div>
           </div>
         </div>
         <form
@@ -717,7 +797,7 @@ function Footer() {
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-foreground/5 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <div>© {new Date().getFullYear()} {site.brand.name}. All rights reserved.</div>
-          <div className="inline-flex items-center gap-1.5"><Volume2 className="h-3 w-3" /> Made with signal.</div>
+          <div className="inline-flex items-center gap-1.5"><Volume2 className="h-3 w-3" /> Made with Love for music.</div>
         </div>
       </div>
     </footer>

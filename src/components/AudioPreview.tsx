@@ -102,7 +102,7 @@ export function AudioPreview({ src, id, variant = "pill", className = "" }: Prop
   return (
     <button
       onClick={toggle}
-      aria-label={playing ? "Pause preview" : "Play 30 second preview"}
+      aria-label={playing ? "Pause preview" : "Play a preview"}
       className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-foreground px-4 py-2 text-xs font-bold text-background transition hover:scale-105 ${className}`}
     >
       <span
