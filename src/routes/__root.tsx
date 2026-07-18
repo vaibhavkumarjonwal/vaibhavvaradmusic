@@ -126,7 +126,7 @@ export const Route =
         },
         {
           rel: "icon",
-          href: "/vector.svg",
+          href: "/Vector.svg",
           type: "image/svg+xml",
         },
       ],
