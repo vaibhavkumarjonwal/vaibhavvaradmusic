@@ -1,8 +1,20 @@
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
+
+type Dot = {
+  id: number;
+  left: number;
+  top: number;
+  size: number;
+  delay: number;
+  duration: number;
+  purple: boolean;
+};
 
 export function Particles({ count = 40 }: { count?: number }) {
-  const dots = useMemo(
-    () =>
+  const [dots, setDots] = useState<Dot[]>([]);
+
+  useEffect(() => {
+    setDots(
       Array.from({ length: count }).map((_, i) => ({
         id: i,
         left: Math.random() * 100,
@@ -11,9 +23,10 @@ export function Particles({ count = 40 }: { count?: number }) {
         delay: Math.random() * 8,
         duration: 6 + Math.random() * 10,
         purple: Math.random() > 0.5,
-      })),
-    [count],
-  );
+      }))
+    );
+  }, [count]);
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {dots.map((d) => (
@@ -25,8 +38,14 @@ export function Particles({ count = 40 }: { count?: number }) {
             top: `${d.top}%`,
             width: d.size,
             height: d.size,
-            background: d.purple ? "oklch(0.62 0.24 300)" : "oklch(0.82 0.15 210)",
-            boxShadow: `0 0 ${d.size * 6}px ${d.purple ? "oklch(0.62 0.24 300)" : "oklch(0.82 0.15 210)"}`,
+            background: d.purple
+              ? "oklch(0.62 0.24 300)"
+              : "oklch(0.82 0.15 210)",
+            boxShadow: `0 0 ${d.size * 6}px ${
+              d.purple
+                ? "oklch(0.62 0.24 300)"
+                : "oklch(0.82 0.15 210)"
+            }`,
             animationDelay: `${d.delay}s`,
             animationDuration: `${d.duration}s`,
             opacity: 0.6,

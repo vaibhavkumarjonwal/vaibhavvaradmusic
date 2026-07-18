@@ -3,7 +3,7 @@ import cover1 from "@/assets/TumAayeHoArtwork-1600px_Final2.png";
 import artist1 from "@/assets/virus.jpg";
 import artist2 from "@/assets/varad.jpeg";
 import mp3 from "@/assets/Sample.mp3";
-import Logo from "@/assets/Vector.svg?react";
+//import Logo from "@/assets/Vector.svg?react";
 
 export const site = {
   brand: {
@@ -82,7 +82,7 @@ export const site = {
       name: "Vaibhav Jonwal",
       role: "Composer · Songwriter",
       photo: artist1,
-      bio: "Lyricist and topline writer, composer and producer.",
+      bio: "Lyricist, composer and producer.",
       instrument: "Guitar, Keyboard",
       //fun: "Collects vintage synthesizers.",
       artistinstagram: "https://www.instagram.com/vaibhav_vkj",
@@ -94,7 +94,7 @@ export const site = {
       name: "Varad Vyavhare",
       role: "Vocals · Songwriter · Composer ",
       photo: artist2,
-      bio: ". Draws from Hindi cinema, poetry and late-night city drives.",
+      bio: "Draws from cinema, poetry and singing.",
       instrument: "Flute, Guitar",
       //fun: "Can quote every Guru Dutt film verbatim.",
       artistinstagram: "https://www.instagram.com/varadvyavharee",

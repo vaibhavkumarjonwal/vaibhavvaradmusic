@@ -133,13 +133,14 @@ function Hero() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.0 }}
-          className="font-display text-5xl font-black leading-[0.9] tracking-tighter md:text-7xl lg:text-8xl"
-        >
-          <span className="block text-gradient">vaibhavvaradmusic</span>
-        </motion.h1>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 1.0 }}
+  className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight px-4 break-all"
+>  <span className="block text-gradient">
+    vaibhavvaradmusic
+  </span>
+</motion.h1>
 
         <HeroCountdown />
 
