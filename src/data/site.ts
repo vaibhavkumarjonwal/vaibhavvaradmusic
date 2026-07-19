@@ -19,7 +19,7 @@ export const site = {
     label: "New Single",
     // ISO 8601 with timezone — 20 July 2026, 00:00 IST
     date: "2026-07-20T00:00:00+05:30",
-    cta: { label: "Pre-save", href: "#latest" },
+    cta: { label: "Pre-save", href: "https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=WF5mZHUiQ-e6I-jTrmZoBg&utm_source=copy-link" },
     liveLabel: "Live Now",
   },
   hero: {
