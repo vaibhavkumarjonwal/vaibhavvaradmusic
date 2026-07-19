@@ -35,7 +35,7 @@ export const site = {
     title: "Tum Aaye Ho",
     date: "2026 · Single",
     cover: cover1,
-    description: "The lead single from our upcoming EP — a cinematic blend of Indian pop and electronic textures.",
+    description: "The lead single from our upcoming Song — a cinematic blend of Indian pop and electronic textures.",
     previewUrl: mp3,
     links: [
       { name: "Spotify", href: "https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=4325c299e04d4cfc" },
