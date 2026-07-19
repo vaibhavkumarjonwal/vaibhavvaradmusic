@@ -24,11 +24,11 @@ export const site = {
   },
   hero: {
     ctas: [
-      { label: "Listen Now", href: "#latest", icon: "play", variant: "primary" as const },
-      { label: "Latest Release", href: "#latest", icon: "music", variant: "ghost" as const },
+      { label: "Listen Now", href: "https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=WF5mZHUiQ-e6I-jTrmZoBg&utm_source=copy-link", icon: "play", variant: "primary" as const },
+      { label: "Latest Release", href: "https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=WF5mZHUiQ-e6I-jTrmZoBg&utm_source=copy-linkt", icon: "music", variant: "ghost" as const },
       { label: "Instagram", href: "https://www.instagram.com/vaibhavvaradmusic", icon: "instagram", variant: "ghost" as const },
       { label: "YouTube", href: "https://www.youtube.com/@VaibhavVaradMusic", icon: "youtube", variant: "ghost" as const },
-      { label: "Spotify", href: "https://spotify.com", icon: "spotify", variant: "ghost" as const },
+      { label: "Spotify", href: "https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=WF5mZHUiQ-e6I-jTrmZoBg&utm_source=copy-link", icon: "spotify", variant: "ghost" as const },
     ],
   },
   latest: {
