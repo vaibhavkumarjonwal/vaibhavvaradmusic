@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute ,  Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring } from "framer-motion";
 import {
   Play, Music, Instagram, Youtube, Twitter, Headphones,
@@ -162,9 +162,13 @@ function Hero() {
           <a href="#latest" className="group relative inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition hover:scale-[1.03] glow-purple">
             <Play className="h-4 w-4 fill-background" /> Listen Now
           </a>
-          <a href="#latest" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-foreground/10">
-            <Music className="h-4 w-4" /> Latest Release
-          </a>
+          <Link
+            to="/chords"
+            className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-foreground/10"
+              >
+            <Music className="h-4 w-4" />
+            Get Chords
+            </Link>
          <a
   href="https://www.instagram.com/vaibhavvaradmusic"
   target="_blank"
