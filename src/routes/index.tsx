@@ -180,7 +180,7 @@ function Hero() {
 </a>
 
 <a
-  href="https://www.youtube.com/@VaibhavVaradMusic"
+  href="https://youtu.be/5xFWCxTY88E?si=xOyUfY0BjC_HZCbx"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="YouTube"
@@ -323,7 +323,7 @@ function VideosSection() {
               <iframe
                 loading="lazy"
                 className="h-full w-full"
-                src={`https://www.youtube.com/embed/${v.id}`}
+                src={`https://youtu.be/5xFWCxTY88E?si=xOyUfY0BjC_HZCbx/${v.id}`}
                 title={v.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
