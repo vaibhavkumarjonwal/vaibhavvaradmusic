@@ -42,7 +42,7 @@ export const site = {
       { name: "Apple Music", href: "https://music.apple.com/in/album/tum-aaye-ho/6790352769?i=6790352779" },
       { name: "YouTube Music", href: "https://music.youtube.com/watch?v=5xFWCxTY88E" },
       { name: "Amazon Music", href: "https://music.amazon.in/tracks/B0H8PBBBXZ?marketplaceId=A21TJRUUN4KGV&musicTerritory=IN&ref=dm_sh_scvGHOsS368CrjfX8dZdDa5TE" },
-      { name: "JioSaavn", href: "" },
+      { name: "JioSaavn", href: "https://www.jiosaavn.com/song/tum-aaye-ho/HyZcdhZyRWE" },
       { name: "Gaana", href: "" },
       { name: "Wynk", href: "" },
       { name: "SoundCloud", href: "" },
