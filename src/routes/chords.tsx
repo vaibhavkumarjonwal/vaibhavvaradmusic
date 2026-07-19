@@ -57,14 +57,13 @@ useEffect(() => {
 
   let rafId: number;
   let lastTime: number | null = null;
-  let accumulated = 0; // handles sub-pixel speeds smoothly
+  let accumulated = 0;
 
   const step = (time: number) => {
     if (lastTime === null) lastTime = time;
     const delta = time - lastTime;
     lastTime = time;
 
-    // scrollSpeed is "px per ~16ms frame", scale by actual delta
     accumulated += (scrollSpeed * delta) / 16;
 
     if (accumulated >= 1) {
@@ -74,8 +73,9 @@ useEffect(() => {
       const doc = document.documentElement;
       const nextY = window.scrollY + pixels;
 
-      // plain scrollTo(x, y) is more reliable on iOS than scrollBy({behavior})
-      window.scrollTo(0, nextY);
+      // behavior: "instant" overrides the global CSS scroll-behavior: smooth,
+      // which is what was breaking rapid programmatic scrolling on iOS Safari
+       window.scrollTo({ top: nextY, left: 0, behavior: "instant" } as ScrollToOptions);
 
       if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) {
         setAutoScroll(false);
