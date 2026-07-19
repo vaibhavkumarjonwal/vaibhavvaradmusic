@@ -55,22 +55,39 @@ function ChordsPage() {
 useEffect(() => {
   if (!autoScroll) return;
 
-  const interval = window.setInterval(() => {
-    window.scrollBy({
-      top: scrollSpeed,
-      behavior: "auto",
-    });
+  let rafId: number;
+  let lastTime: number | null = null;
+  let accumulated = 0; // handles sub-pixel speeds smoothly
 
-    // Stop at the bottom of the page
-    if (
-      window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight - 2
-    ) {
-      setAutoScroll(false);
+  const step = (time: number) => {
+    if (lastTime === null) lastTime = time;
+    const delta = time - lastTime;
+    lastTime = time;
+
+    // scrollSpeed is "px per ~16ms frame", scale by actual delta
+    accumulated += (scrollSpeed * delta) / 16;
+
+    if (accumulated >= 1) {
+      const pixels = Math.floor(accumulated);
+      accumulated -= pixels;
+
+      const doc = document.documentElement;
+      const nextY = window.scrollY + pixels;
+
+      // plain scrollTo(x, y) is more reliable on iOS than scrollBy({behavior})
+      window.scrollTo(0, nextY);
+
+      if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) {
+        setAutoScroll(false);
+        return;
+      }
     }
-  }, 16); // ~60 FPS
 
-  return () => clearInterval(interval);
+    rafId = requestAnimationFrame(step);
+  };
+
+  rafId = requestAnimationFrame(step);
+  return () => cancelAnimationFrame(rafId);
 }, [autoScroll, scrollSpeed]);
 return (
   <>
@@ -113,12 +130,12 @@ return (
         by vaibhavvaradmusic
       </p>
 
-      <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
-        <Info title="Orignal Key" value="D# Major" />
-        <Info title="Capo" value="1st Fret" />
-        <Info title="Tuning" value="Standard" />
-        <Info title="Difficulty" value="Intermediate" />
-      </div>
+     <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4 items-stretch">
+  <Info title="Orignal Key" value="D# Major" />
+  <Info title="Capo" value="1st Fret" />
+  <Info title="Tuning" value="Standard" />
+  <Info title="Difficulty" value="Intermediate" />
+</div>
     </div>
   </div>
 
@@ -168,12 +185,12 @@ function Info({
   value: string;
 }) {
   return (
-    <div className="rounded-2xl border border-foreground/10 p-5">
-      <div className="text-xs uppercase tracking-wider text-muted-foreground">
+    <div className="flex h-full min-w-0 flex-col items-center justify-center rounded-2xl border border-foreground/10 p-4 text-center sm:p-5">
+      <div className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
         {title}
       </div>
 
-      <div className="mt-2 font-bold text-lg">
+      <div className="mt-2 w-full break-words text-base font-bold leading-tight sm:text-lg">
         {value}
       </div>
     </div>
