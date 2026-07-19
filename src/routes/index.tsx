@@ -190,7 +190,7 @@ function Hero() {
 </a>
 
 <a
-  href="https://spotify.com"
+  href="https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=4325c299e04d4cfc"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Spotify"
