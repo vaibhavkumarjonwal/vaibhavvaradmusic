@@ -29,6 +29,7 @@ export const Route = createFileRoute("/chords")({
 function ChordsPage() {
     const toolbarRef = useRef<HTMLDivElement>(null);
     const [toolbarFixed, setToolbarFixed] = useState(false);
+    const DEFAULT_TRANSPOSE = 1;
   const [transpose, setTranspose] = useState(0);
   const [fontSize, setFontSize] = useState(20);
   const [autoScroll, setAutoScroll] = useState(false);
@@ -113,10 +114,10 @@ return (
       </p>
 
       <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
-        <Info title="Key" value="G Major" />
-        <Info title="Capo" value="2nd Fret" />
+        <Info title="Orignal Key" value="D# Major" />
+        <Info title="Capo" value="1st Fret" />
         <Info title="Tuning" value="Standard" />
-        <Info title="Difficulty" value="Easy" />
+        <Info title="Difficulty" value="Intermediate" />
       </div>
     </div>
   </div>
@@ -147,10 +148,10 @@ return (
 </div>
 
   <div className="glass mt-8 rounded-3xl p-8">
-    <SongRenderer
-      transpose={transpose}
-      fontSize={fontSize}
-    />
+   <SongRenderer
+  transpose={transpose + DEFAULT_TRANSPOSE}
+  fontSize={fontSize}
+/>
   </div>
 </div>
     </main>
