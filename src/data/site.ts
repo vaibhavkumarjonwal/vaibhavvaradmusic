@@ -20,7 +20,7 @@ export const site = {
     // ISO 8601 with timezone — 20 July 2026, 00:00 IST
     date: "2026-07-20T00:00:00+05:30",
     cta: { label: "Pre-save", href: "#latest" },
-    liveLabel: "Coming Soon",
+    liveLabel: "Live Now",
   },
   hero: {
     ctas: [
@@ -38,15 +38,15 @@ export const site = {
     description: "The lead single from our upcoming EP — a cinematic blend of Indian pop and electronic textures.",
     previewUrl: mp3,
     links: [
-      { name: "Spotify", href: "#" },
-      { name: "Apple Music", href: "#" },
-      { name: "YouTube Music", href: "#" },
-      { name: "Amazon Music", href: "#" },
-      { name: "JioSaavn", href: "#" },
-      { name: "Gaana", href: "#" },
-      { name: "Wynk", href: "#" },
-      { name: "SoundCloud", href: "#" },
-      { name: "Bandcamp", href: "#" },
+      { name: "Spotify", href: "https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=4325c299e04d4cfc" },
+      { name: "Apple Music", href: "" },
+      { name: "YouTube Music", href: "https://music.youtube.com/watch?v=5xFWCxTY88E" },
+      { name: "Amazon Music", href: "" },
+      { name: "JioSaavn", href: "" },
+      { name: "Gaana", href: "" },
+      { name: "Wynk", href: "" },
+      { name: "SoundCloud", href: "" },
+      { name: "Bandcamp", href: "" },
     ],
   },
   releases: [
