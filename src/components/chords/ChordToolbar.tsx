@@ -25,35 +25,35 @@ export default function ChordToolbar({
   setScrollSpeed,
 }: Props) {
   return (
-   <div className="rounded-3xl border border-foreground/10 bg-background/90 p-5 shadow-xl backdrop-blur-xl">
+    <div className="rounded-3xl border border-foreground/10 bg-background/90 p-5 shadow-xl backdrop-blur-xl">
       <div className="rounded-3xl border border-foreground/10 bg-background/90 p-5 shadow-2xl backdrop-blur-xl">
         <div className="flex flex-wrap items-center justify-between gap-6">
           {/* Transpose */}
           {/* Transpose */}
-<div className="flex items-center gap-3">
-  <span className="text-sm font-semibold">Transpose</span>
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-semibold">Transpose</span>
 
-  <button
-    onClick={() => setTranspose(Math.max(-12, transpose - 1))}
-    disabled={transpose <= -12}
-    className="rounded-full border border-foreground/10 p-2 transition hover:bg-foreground/10 disabled:cursor-not-allowed disabled:opacity-40"
-  >
-    <Minus size={16} />
-  </button>
+            <button
+              onClick={() => setTranspose(Math.max(-12, transpose - 1))}
+              disabled={transpose <= -12}
+              className="rounded-full border border-foreground/10 p-2 transition hover:bg-foreground/10 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <Minus size={16} />
+            </button>
 
-  <div className="w-10 text-center font-bold">
-    {transpose > 0 ? "+" : ""}
-    {transpose}
-  </div>
+            <div className="w-10 text-center font-bold">
+              {transpose > 0 ? "+" : ""}
+              {transpose}
+            </div>
 
-  <button
-    onClick={() => setTranspose(Math.min(12, transpose + 1))}
-    disabled={transpose >= 12}
-    className="rounded-full border border-foreground/10 p-2 transition hover:bg-foreground/10 disabled:cursor-not-allowed disabled:opacity-40"
-  >
-    <Plus size={16} />
-  </button>
-</div>
+            <button
+              onClick={() => setTranspose(Math.min(12, transpose + 1))}
+              disabled={transpose >= 12}
+              className="rounded-full border border-foreground/10 p-2 transition hover:bg-foreground/10 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <Plus size={16} />
+            </button>
+          </div>
           {/* Font Size */}
           <div className="flex items-center gap-3">
             <Type size={18} />

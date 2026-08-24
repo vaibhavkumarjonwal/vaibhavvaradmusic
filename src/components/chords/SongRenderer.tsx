@@ -6,22 +6,15 @@ interface Props {
   fontSize: number;
 }
 
-export default function SongRenderer({
-  transpose,
-  fontSize,
-}: Props) {
+export default function SongRenderer({ transpose, fontSize }: Props) {
   return (
     <div className="mt-12 space-y-12">
       {song.sections.map((section, sectionIndex) => (
         <div key={sectionIndex}>
-          <h2 className="mb-2 text-2xl font-bold text-primary">
-            {section.name}
-          </h2>
+          <h2 className="mb-2 text-2xl font-bold text-primary">{section.name}</h2>
 
           {section.description && (
-            <p className="mb-6 italic text-muted-foreground">
-              ({section.description})
-            </p>
+            <p className="mb-6 italic text-muted-foreground">({section.description})</p>
           )}
 
           {section.lines.map((line: any, lineIndex: number) => {
@@ -32,11 +25,7 @@ export default function SongRenderer({
               return (
                 <div key={lineIndex} className="mb-8">
                   {line.rows.map((row: any[], rowIndex: number) => (
-                    <div
-                      key={rowIndex}
-                      className="relative h-7 font-mono"
-                      style={{ fontSize }}
-                    >
+                    <div key={rowIndex} className="relative h-7 font-mono" style={{ fontSize }}>
                       {row.map((c: any, chordIndex: number) => (
                         <span
                           key={chordIndex}
@@ -58,11 +47,7 @@ export default function SongRenderer({
             // LYRIC LINE
             // --------------------------
             return (
-              <div
-                key={lineIndex}
-                className="mb-8 font-mono"
-                style={{ fontSize }}
-              >
+              <div key={lineIndex} className="mb-8 font-mono" style={{ fontSize }}>
                 <div className="relative h-7">
                   {(line.chords || []).map((c: any, chordIndex: number) => (
                     <span
@@ -77,9 +62,7 @@ export default function SongRenderer({
                   ))}
                 </div>
 
-                <div className="whitespace-pre-wrap">
-                  {line.lyrics}
-                </div>
+                <div className="whitespace-pre-wrap">{line.lyrics}</div>
               </div>
             );
           })}

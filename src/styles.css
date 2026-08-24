@@ -69,10 +69,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-
-
 :root {
-  
   --radius: 1rem;
   --background: oklch(0.09 0.005 300);
   --foreground: oklch(0.98 0 0);
@@ -112,7 +109,7 @@
 
 /* Warm light theme — inspired by the golden / marigold artist DP */
 .light {
-  --brand: #FFB700;
+  --brand: #ffb700;
   --background: oklch(0.975 0.025 85);
   --foreground: oklch(0.22 0.05 55);
   --card: oklch(0.98 0.03 82);
@@ -229,30 +226,63 @@
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(-30px) translateX(20px); }
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+  }
 }
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.9; }
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
 }
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 @keyframes waveform-bar {
-  0%, 100% { transform: scaleY(0.25); }
-  50% { transform: scaleY(1); }
+  0%,
+  100% {
+    transform: scaleY(0.25);
+  }
+  50% {
+    transform: scaleY(1);
+  }
 }
 
-.animate-float { animation: float-slow 8s ease-in-out infinite; }
-.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
-.animate-marquee { animation: marquee 30s linear infinite; }
-.animate-waveform-bar { animation: waveform-bar 0.9s ease-in-out infinite; transform-origin: center; }
+.animate-float {
+  animation: float-slow 8s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-waveform-bar {
+  animation: waveform-bar 0.9s ease-in-out infinite;
+  transform-origin: center;
+}
 
 /* Custom scrollbar */
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: var(--color-background); }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--glow-a), var(--glow-b));
   border-radius: 8px;
@@ -266,9 +296,13 @@
 
 /* Ensure old base rules stay tidy */
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
 }
-

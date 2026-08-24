@@ -9,17 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ChordsRouteImport } from './routes/chords'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ChordsRouteImport } from './routes/chords'
 
-const ChordsRoute = ChordsRouteImport.update({
-  id: '/chords',
-  path: '/chords',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChordsRoute = ChordsRouteImport.update({
+  id: '/chords',
+  path: '/chords',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -51,18 +51,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/chords': {
-      id: '/chords'
-      path: '/chords'
-      fullPath: '/chords'
-      preLoaderRoute: typeof ChordsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chords': {
+      id: '/chords'
+      path: '/chords'
+      fullPath: '/chords'
+      preLoaderRoute: typeof ChordsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

@@ -102,9 +102,5 @@ function Unit({ v, label }: { v: string; label: string }) {
 }
 
 function Colon() {
-  return (
-    <span className="font-display text-xl text-muted-foreground/40 sm:text-2xl">
-      :
-    </span>
-  );
+  return <span className="font-display text-xl text-muted-foreground/40 sm:text-2xl">:</span>;
 }
