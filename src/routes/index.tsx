@@ -323,7 +323,7 @@ function VideosSection() {
               <iframe
                 loading="lazy"
                 className="h-full w-full"
-                src={`https://youtu.be/5xFWCxTY88E?si=xOyUfY0BjC_HZCbx/${v.id}`}
+                src="https://www.youtube.com/embed/vFyx2fG57mE?si=_dLaYpWiI0opWSBQ"
                 title={v.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

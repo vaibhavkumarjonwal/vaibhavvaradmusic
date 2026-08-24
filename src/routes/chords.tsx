@@ -64,7 +64,7 @@ useEffect(() => {
     const delta = time - lastTime;
     lastTime = time;
 
-    accumulated += (scrollSpeed * delta) / 16;
+    accumulated += (scrollSpeed * delta) / 50;
 
     if (accumulated >= 1) {
       const pixels = Math.floor(accumulated);

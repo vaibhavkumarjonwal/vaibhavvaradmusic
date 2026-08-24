@@ -58,7 +58,7 @@ export const site = {
     //{ title: "Static Bloom", cover: cover3, genre: "Electronic", duration: "3:37", date: "2023", previewUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
   ],
   videos: [
-    { title: "Glimpse of Tum Aaye Ho", type: "Youtube Short", id: "3RsscziFC0E" },
+    { title: "Tum Aaye Ho (Official Lyrical Video)", type: "Youtube Video", id: "vFyx2fG57mE" },
     //{ title: "Midnight Signal — Lyric Video", type: "Lyric Video", id: "dQw4w9WgXcQ" },
     //{ title: "Live at Mumbai Arena", type: "Live", id: "dQw4w9WgXcQ" },
     //{ title: "Studio Sessions", type: "BTS", id: "dQw4w9WgXcQ" },
