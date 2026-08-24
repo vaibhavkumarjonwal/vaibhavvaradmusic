@@ -10,7 +10,7 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-
+import { Analytics } from "@vercel/analytics/react";
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -147,6 +147,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
       <body>
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>
