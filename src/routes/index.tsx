@@ -1,10 +1,28 @@
-import { createFileRoute ,  Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring } from "framer-motion";
 import {
-  Play, Music, Instagram, Youtube, Twitter, Headphones,
-  ArrowRight, Download, Mail, MapPin, Calendar,
-  Plus, Minus, ArrowUp, Sparkles, Radio, Mic2,
-  Guitar, Volume2, ExternalLink, Send, Star,
+  Play,
+  Music,
+  Instagram,
+  Youtube,
+  Twitter,
+  Headphones,
+  ArrowRight,
+  Download,
+  Mail,
+  MapPin,
+  Calendar,
+  Plus,
+  Minus,
+  ArrowUp,
+  Sparkles,
+  Radio,
+  Mic2,
+  Guitar,
+  Volume2,
+  ExternalLink,
+  Send,
+  Star,
 } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { site } from "@/data/site";
@@ -19,7 +37,10 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: `${site.brand.name} — ${site.brand.tagline}` },
-      { name: "description", content: site.brand.subtitle + " Official website — music, videos, tour dates and press." },
+      {
+        name: "description",
+        content: site.brand.subtitle + " Official website — music, videos, tour dates and press.",
+      },
       { property: "og:title", content: `${site.brand.name} — ${site.brand.tagline}` },
       { property: "og:description", content: site.brand.subtitle },
       { property: "og:type", content: "website" },
@@ -48,7 +69,9 @@ function Index() {
             <div className="font-display text-5xl font-black text-gradient animate-pulse-glow">
               <Logo className="mx-auto h-20 w-auto text-primary animate-pulse-glow" />
             </div>
-            <div className="mt-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">Loading</div>
+            <div className="mt-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">
+              Loading
+            </div>
           </div>
         </div>
       )}
@@ -88,19 +111,26 @@ function Nav() {
     <header className="fixed inset-x-0 top-0 z-40">
       <div className="mx-auto max-w-7xl px-4 py-4">
         <nav className="glass flex items-center justify-between rounded-full px-5 py-2.5">
-     <a href="#top" className="flex items-center">
-      <Logo className="h-10 w-auto text-primary" />
-    </a>
+          <a href="#top" className="flex items-center">
+            <Logo className="h-10 w-auto text-primary" />
+          </a>
           <div className="hidden gap-6 md:flex">
             {links.map(([label, href]) => (
-              <a key={href} href={href} className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition hover:text-foreground">
+              <a
+                key={href}
+                href={href}
+                className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition hover:text-foreground"
+              >
                 {label}
               </a>
             ))}
           </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a href="#latest" className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-1.5 text-xs font-semibold text-background transition hover:opacity-90">
+            <a
+              href="#latest"
+              className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-1.5 text-xs font-semibold text-background transition hover:opacity-90"
+            >
               <Play className="h-3 w-3 fill-background" /> Play
             </a>
           </div>
@@ -112,9 +142,16 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
+    <section
+      id="top"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24"
+    >
       <div className="absolute inset-0">
-        <img src={site.brand.heroImage} alt="" className="h-full w-full object-cover object-[center_36%] opacity-65" />
+        <img
+          src={site.brand.heroImage}
+          alt=""
+          className="h-full w-full object-cover object-[center_36%] opacity-65"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/28 to-background/45 dark:from-background/15 dark:via-background/35 dark:to-background/55" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.62_0.24_300/0.18),transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,oklch(0.82_0.15_210/0.1),transparent_60%)]" />
@@ -133,14 +170,14 @@ function Hero() {
         </motion.div>
 
         <motion.h1
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 1.0 }}
-  className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight px-4 break-all"
->  <span className="block text-gradient">
-    vaibhavvaradmusic
-  </span>
-</motion.h1>
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.0 }}
+          className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight px-4 break-all"
+        >
+          {" "}
+          <span className="block text-gradient">vaibhavvaradmusic</span>
+        </motion.h1>
 
         <HeroCountdown />
 
@@ -159,52 +196,65 @@ function Hero() {
           transition={{ duration: 0.8, delay: 1.4 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
-          <a href="#latest" className="group relative inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition hover:scale-[1.03] glow-purple">
+          <a
+            href="#latest"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition hover:scale-[1.03] glow-purple"
+          >
             <Play className="h-4 w-4 fill-background" /> Listen Now
           </a>
           <Link
             to="/chords"
             className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-foreground/10"
-              >
+          >
             <Music className="h-4 w-4" />
             Get Chords
-            </Link>
-         <a
-  href="https://www.instagram.com/vaibhavvaradmusic"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Instagram"
-  className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
->
-  <Instagram className="h-4 w-4" />
-</a>
-
-<a
-  href="https://youtu.be/5xFWCxTY88E?si=xOyUfY0BjC_HZCbx"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="YouTube"
-  className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
->
-  <Youtube className="h-4 w-4" />
-</a>
-
-<a
-  href="https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=4325c299e04d4cfc"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Spotify"
-  className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
->
-  <Headphones className="h-4 w-4" />
-</a>  </motion.div>
-
+          </Link>
+          <a
+            href="https://www.instagram.com/vaibhavvaradmusic"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
+          >
+            <Instagram className="h-4 w-4" />
+          </a>
+          <a
+            href="https://youtu.be/5xFWCxTY88E?si=xOyUfY0BjC_HZCbx"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
+          >
+            <Youtube className="h-4 w-4" />
+          </a>
+          <a
+            href="https://open.spotify.com/track/1sQfVsiDskUJoDn1bQBIGj?si=4325c299e04d4cfc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Spotify"
+            className="glass inline-flex items-center justify-center rounded-full px-4 py-3 transition hover:bg-foreground/10"
+          >
+            <Headphones className="h-4 w-4" />
+          </a>{" "}
+        </motion.div>
       </div>
     </section>
   );
 }
 
-function Section({ id, eyebrow, title, subtitle, children }: { id?: string; eyebrow?: string; title: string; subtitle?: string; children: ReactNode }) {
+function Section({
+  id,
+  eyebrow,
+  title,
+  subtitle,
+  children,
+}: {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  children: ReactNode;
+}) {
   return (
     <section id={id} className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -216,7 +266,9 @@ function Section({ id, eyebrow, title, subtitle, children }: { id?: string; eyeb
           className="mb-14 max-w-2xl"
         >
           {eyebrow && (
-            <div className="mb-3 text-xs uppercase tracking-[0.35em] text-[oklch(0.82_0.15_210)]">{eyebrow}</div>
+            <div className="mb-3 text-xs uppercase tracking-[0.35em] text-[oklch(0.82_0.15_210)]">
+              {eyebrow}
+            </div>
           )}
           <h2 className="font-display text-4xl font-black tracking-tight md:text-6xl">{title}</h2>
           {subtitle && <p className="mt-4 text-muted-foreground md:text-lg">{subtitle}</p>}
@@ -237,15 +289,23 @@ function LatestRelease() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative aspect-square overflow-hidden rounded-2xl glow-purple">
-          <img src={r.cover} alt={r.title} className="h-full w-full object-cover" width={800} height={800} loading="lazy" />
-             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 to-transparent">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <AudioPreview
-            src={r.previewUrl}
-            id={`latest-${r.title}`}
-            className="absolute bottom-5 left-5"
+          className="relative aspect-square overflow-hidden rounded-2xl glow-purple"
+        >
+          <img
+            src={r.cover}
+            alt={r.title}
+            className="h-full w-full object-cover"
+            width={800}
+            height={800}
+            loading="lazy"
           />
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 to-transparent">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <AudioPreview
+              src={r.previewUrl}
+              id={`latest-${r.title}`}
+              className="absolute bottom-5 left-5"
+            />
           </div>
         </motion.div>
         <div className="flex flex-col justify-center">
@@ -253,13 +313,20 @@ function LatestRelease() {
           <h3 className="mt-2 font-display text-4xl font-black md:text-5xl">{r.title}</h3>
           <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {r.links.map((l) => (
-              <a key={l.name} href={l.href} className="glass group inline-flex items-center justify-between rounded-xl px-4 py-3 text-sm transition hover:bg-foreground/10">
+              <a
+                key={l.name}
+                href={l.href}
+                className="glass group inline-flex items-center justify-between rounded-xl px-4 py-3 text-sm transition hover:bg-foreground/10"
+              >
                 <span>{l.name}</span>
                 <ExternalLink className="h-3.5 w-3.5 text-muted-foreground transition group-hover:text-foreground" />
               </a>
             ))}
           </div>
-          <a href="#" className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background glow-cyan transition hover:scale-[1.03]">
+          <a
+            href="#"
+            className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background glow-cyan transition hover:scale-[1.03]"
+          >
             <Play className="h-4 w-4 fill-background" /> Listen Now
           </a>
         </div>
@@ -270,7 +337,12 @@ function LatestRelease() {
 
 function MusicSection() {
   return (
-    <Section id="music" eyebrow="Discography" title="Music" subtitle="Every release, one place. Stream on your favorite platform.">
+    <Section
+      id="music"
+      eyebrow="Discography"
+      title="Music"
+      subtitle="Every release, one place. Stream on your favorite platform."
+    >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {site.releases.map((r, i) => (
           <motion.article
@@ -282,7 +354,12 @@ function MusicSection() {
             className="glass group relative overflow-hidden rounded-3xl p-4 transition hover:-translate-y-1"
           >
             <div className="relative aspect-square overflow-hidden rounded-2xl">
-              <img src={r.cover} alt={r.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" loading="lazy" />
+              <img
+                src={r.cover}
+                alt={r.title}
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
               <div className="absolute inset-0 m-auto grid place-items-center opacity-100 transition md:opacity-0 md:group-hover:opacity-100 md:focus-within:opacity-100">
                 <AudioPreview src={r.previewUrl} id={`release-${r.title}-${i}`} variant="overlay" />
@@ -290,14 +367,25 @@ function MusicSection() {
             </div>
             <div className="mt-4 min-w-0">
               <h3 className="truncate font-display text-lg font-bold">{r.title}</h3>
-              <div className="mt-1 text-xs text-muted-foreground">{r.genre} · {r.duration} · {r.date}</div>
+              <div className="mt-1 text-xs text-muted-foreground">
+                {r.genre} · {r.duration} · {r.date}
+              </div>
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-1.5">
-              {["Spotify","Apple","YT"].map((s) => (
-                <span key={s} className="rounded-full border border-foreground/10 px-2.5 py-1 text-[10px] uppercase tracking-wider text-muted-foreground">{s}</span>
+              {["Spotify", "Apple", "YT"].map((s) => (
+                <span
+                  key={s}
+                  className="rounded-full border border-foreground/10 px-2.5 py-1 text-[10px] uppercase tracking-wider text-muted-foreground"
+                >
+                  {s}
+                </span>
               ))}
-              <button className="ml-auto text-[10px] uppercase tracking-widest text-muted-foreground transition hover:text-foreground">Lyrics</button>
-              <button className="text-[10px] uppercase tracking-widest text-muted-foreground transition hover:text-foreground">Credits</button>
+              <button className="ml-auto text-[10px] uppercase tracking-widest text-muted-foreground transition hover:text-foreground">
+                Lyrics
+              </button>
+              <button className="text-[10px] uppercase tracking-widest text-muted-foreground transition hover:text-foreground">
+                Credits
+              </button>
             </div>
           </motion.article>
         ))}
@@ -308,7 +396,12 @@ function MusicSection() {
 
 function VideosSection() {
   return (
-    <Section id="videos" eyebrow="Watch" title="Videos" subtitle="Music videos, live performances and behind the scenes.">
+    <Section
+      id="videos"
+      eyebrow="Watch"
+      title="Videos"
+      subtitle="Music videos, live performances and behind the scenes."
+    >
       <div className="grid gap-6 md:grid-cols-2">
         {site.videos.map((v, i) => (
           <motion.div
@@ -354,7 +447,12 @@ function AboutSection() {
           transition={{ duration: 0.7 }}
           className="relative aspect-[4/5] overflow-hidden rounded-3xl glow-purple"
         >
-          <img src={site.about.image} alt="Duo" className="h-full w-full object-cover" loading="lazy" />
+          <img
+            src={site.about.image}
+            alt="Duo"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </motion.div>
         <div className="flex flex-col justify-center">
@@ -412,9 +510,7 @@ function ArtistsSection() {
             </div>
 
             <div className="space-y-4 p-6">
-              <p className="text-sm text-muted-foreground">
-                {a.bio}
-              </p>
+              <p className="text-sm text-muted-foreground">{a.bio}</p>
 
               <div className="grid gap-3 text-sm sm:grid-cols-2">
                 <div className="flex items-center gap-2">
@@ -429,8 +525,6 @@ function ArtistsSection() {
               </div>
 
               <div className="flex gap-2">
-                
-                
                 <a
                   href={a.artistinstagram}
                   aria-label="Instagram"
@@ -446,7 +540,7 @@ function ArtistsSection() {
                 >
                   <Twitter className="h-4 w-4" />
                 </a> */}
-{/* 
+                {/* 
                 <a
                   href="#"
                   aria-label="YouTube"
@@ -470,11 +564,23 @@ function EventsSection() {
       {next && (
         <div className="glass mb-8 grid gap-6 rounded-3xl p-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:p-8 glow-purple">
           <div className="min-w-0">
-            <div className="text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">Next Show — {next.type}</div>
+            <div className="text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">
+              Next Show — {next.type}
+            </div>
             <h3 className="mt-1 font-display text-3xl font-black md:text-4xl">{next.title}</h3>
             <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4" />{next.city}</span>
-              <span className="inline-flex items-center gap-1.5"><Calendar className="h-4 w-4" />{new Date(next.date).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</span>
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin className="h-4 w-4" />
+                {next.city}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Calendar className="h-4 w-4" />
+                {new Date(next.date).toLocaleDateString(undefined, {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </span>
             </div>
           </div>
           <Countdown target={next.date} />
@@ -491,11 +597,23 @@ function EventsSection() {
             className="glass grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl px-6 py-4 transition hover:bg-foreground/5"
           >
             <div className="min-w-0">
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">{e.type}</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                {e.type}
+              </div>
               <div className="truncate font-display text-lg font-bold">{e.title}</div>
-              <div className="mt-0.5 truncate text-xs text-muted-foreground">{e.city} · {new Date(e.date).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })}</div>
+              <div className="mt-0.5 truncate text-xs text-muted-foreground">
+                {e.city} ·{" "}
+                {new Date(e.date).toLocaleDateString(undefined, {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric",
+                })}
+              </div>
             </div>
-            <a href="#" className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-foreground/10 px-4 py-2 text-xs font-semibold transition hover:bg-foreground hover:text-background">
+            <a
+              href="#"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-foreground/10 px-4 py-2 text-xs font-semibold transition hover:bg-foreground hover:text-background"
+            >
               RSVP <ArrowRight className="h-3 w-3" />
             </a>
           </motion.div>
@@ -507,7 +625,12 @@ function EventsSection() {
 
 function PressKitSection() {
   return (
-    <Section id="press" eyebrow="For Media" title="Press Kit" subtitle="Everything you need to feature us.">
+    <Section
+      id="press"
+      eyebrow="For Media"
+      title="Press Kit"
+      subtitle="Everything you need to feature us."
+    >
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {site.pressKit.map((p, i) => (
           <motion.a
@@ -543,9 +666,7 @@ function StatsSection() {
             key={s.label}
             className="glass rounded-3xl p-6 text-center transition hover:scale-[1.02]"
           >
-            <div className="font-display text-3xl font-black text-gradient">
-              {s.value}
-            </div>
+            <div className="font-display text-3xl font-black text-gradient">{s.value}</div>
 
             <div className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
               {s.label}
@@ -574,7 +695,9 @@ function TimelineSection() {
             >
               <div className="absolute left-[10px] top-3 h-3 w-3 rounded-full bg-foreground shadow-[0_0_0_4px_color-mix(in_oklab,var(--glow-a)_35%,transparent)]" />
               <div className="glass inline-block rounded-2xl px-5 py-4">
-                <div className="font-display text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">{t.year}</div>
+                <div className="font-display text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">
+                  {t.year}
+                </div>
                 <div className="mt-1 font-display text-xl font-bold">{t.title}</div>
                 <div className="mt-1 text-sm text-muted-foreground">{t.body}</div>
               </div>
@@ -599,7 +722,12 @@ function GallerySection() {
             transition={{ duration: 0.5, delay: (i % 4) * 0.05 }}
             className="mb-4 break-inside-avoid overflow-hidden rounded-2xl"
           >
-            <img src={src} alt="" className="w-full transition duration-700 hover:scale-105" loading="lazy" />
+            <img
+              src={src}
+              alt=""
+              className="w-full transition duration-700 hover:scale-105"
+              loading="lazy"
+            />
           </motion.div>
         ))}
       </div>
@@ -622,7 +750,9 @@ function MediaSection() {
             className="glass group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl px-6 py-5 transition hover:bg-foreground/5"
           >
             <div className="min-w-0">
-              <div className="text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">{m.source} · {m.date}</div>
+              <div className="text-xs uppercase tracking-widest text-[oklch(0.82_0.15_210)]">
+                {m.source} · {m.date}
+              </div>
               <div className="mt-1 truncate font-display text-lg font-bold">{m.title}</div>
             </div>
             <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-foreground" />
@@ -635,17 +765,25 @@ function MediaSection() {
 
 function MerchSection() {
   return (
-    <Section eyebrow="Coming Soon" title="Merch" subtitle="Limited drops. Designed with the same care as the music.">
+    <Section
+      eyebrow="Coming Soon"
+      title="Merch"
+      subtitle="Limited drops. Designed with the same care as the music."
+    >
       <div className="glass relative overflow-hidden rounded-3xl p-10 md:p-16 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,oklch(0.62_0.24_300/0.25),transparent_60%)]" />
         <div className="relative">
-          <div className="text-xs uppercase tracking-[0.4em] text-[oklch(0.82_0.15_210)]">Drop 001</div>
+          <div className="text-xs uppercase tracking-[0.4em] text-[oklch(0.82_0.15_210)]">
+            Drop 001
+          </div>
           <h3 className="mt-2 font-display text-4xl font-black md:text-6xl">
             <span className="text-gradient">Coming Soon</span>
           </h3>
           <div className="mt-8 flex flex-wrap justify-center gap-2">
             {site.merch.map((m) => (
-              <span key={m} className="glass rounded-full px-4 py-2 text-sm">{m}</span>
+              <span key={m} className="glass rounded-full px-4 py-2 text-sm">
+                {m}
+              </span>
             ))}
           </div>
         </div>
@@ -657,9 +795,16 @@ function MerchSection() {
 function NewsletterSection() {
   const [status, setStatus] = useState<"idle" | "ok">("idle");
   return (
-    <Section eyebrow="Stay In The Loop" title="Newsletter" subtitle="Early access to releases, tickets and drops.">
+    <Section
+      eyebrow="Stay In The Loop"
+      title="Newsletter"
+      subtitle="Early access to releases, tickets and drops."
+    >
       <form
-        onSubmit={(e) => { e.preventDefault(); setStatus("ok"); }}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setStatus("ok");
+        }}
         className="glass mx-auto flex max-w-2xl flex-col gap-3 rounded-3xl p-2 sm:flex-row sm:rounded-full"
       >
         <input
@@ -699,7 +844,9 @@ function SocialsSection() {
             className="glass group flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl p-2 text-center transition hover:-translate-y-1 hover:bg-foreground/10"
           >
             <Radio className="h-5 w-5 text-muted-foreground transition group-hover:text-foreground" />
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground group-hover:text-foreground">{s}</span>
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground group-hover:text-foreground">
+              {s}
+            </span>
           </a>
         ))}
       </div>
@@ -712,10 +859,15 @@ function ContactSection() {
     <Section id="contact" eyebrow="Say Hello" title="Contact & Booking">
       <div className="grid gap-8 md:grid-cols-2">
         <div className="space-y-4">
-          <a href={`mailto:${site.contact.business}`} className="glass flex items-center gap-4 rounded-2xl p-5 transition hover:bg-foreground/5">
+          <a
+            href={`mailto:${site.contact.business}`}
+            className="glass flex items-center gap-4 rounded-2xl p-5 transition hover:bg-foreground/5"
+          >
             <Mail className="h-5 w-5 shrink-0 text-[oklch(0.82_0.15_210)]" />
             <div className="min-w-0">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Business</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                Business
+              </div>
               <div className="truncate font-semibold">{site.contact.business}</div>
             </div>
           </a>
@@ -731,20 +883,30 @@ function ContactSection() {
             <div className="mt-1 font-semibold">Kerala · Gujarat, India</div>
           </div>
         </div>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="glass grid gap-3 rounded-3xl p-6"
-        >
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">Booking / Collaboration</div>
-          <input placeholder="Your name" className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-foreground/30" />
-          <input placeholder="Email" type="email" className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-foreground/30" />
+        <form onSubmit={(e) => e.preventDefault()} className="glass grid gap-3 rounded-3xl p-6">
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">
+            Booking / Collaboration
+          </div>
+          <input
+            placeholder="Your name"
+            className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-foreground/30"
+          />
+          <input
+            placeholder="Email"
+            type="email"
+            className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-foreground/30"
+          />
           <select className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none focus:border-foreground/30">
             <option className="bg-background text-foreground">Booking</option>
             <option className="bg-background text-foreground">Collaboration</option>
             <option className="bg-background text-foreground">Press</option>
             <option className="bg-background text-foreground">Other</option>
           </select>
-          <textarea rows={4} placeholder="Tell us about your project…" className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-foreground/30" />
+          <textarea
+            rows={4}
+            placeholder="Tell us about your project…"
+            className="rounded-xl border border-foreground/10 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-foreground/30"
+          />
           <button className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition hover:scale-[1.02]">
             <Send className="h-4 w-4" /> Send message
           </button>
@@ -768,7 +930,11 @@ function FAQSection() {
                 className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 text-left"
               >
                 <span className="font-display text-lg font-semibold">{f.q}</span>
-                {isOpen ? <Minus className="h-4 w-4 shrink-0" /> : <Plus className="h-4 w-4 shrink-0" />}
+                {isOpen ? (
+                  <Minus className="h-4 w-4 shrink-0" />
+                ) : (
+                  <Plus className="h-4 w-4 shrink-0" />
+                )}
               </button>
               <motion.div
                 initial={false}
@@ -791,19 +957,35 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
           <div>
-            <div className="font-display text-3xl font-black text-gradient"><Logo className="h-10 w-auto text-primary" /></div>
-            <div className="mt-2 text-sm text-muted-foreground">{site.brand.name} · {site.brand.subtitle}</div>
+            <div className="font-display text-3xl font-black text-gradient">
+              <Logo className="h-10 w-auto text-primary" />
+            </div>
+            <div className="mt-2 text-sm text-muted-foreground">
+              {site.brand.name} · {site.brand.subtitle}
+            </div>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-muted-foreground">
-            <a href="#videos" className="hover:text-foreground">Videos</a>
-            <a href="#contact" className="hover:text-foreground">Contact</a>
-            <a href="#" className="hover:text-foreground">Privacy</a>
-            <a href="#" className="hover:text-foreground">Terms</a>
+            <a href="#videos" className="hover:text-foreground">
+              Videos
+            </a>
+            <a href="#contact" className="hover:text-foreground">
+              Contact
+            </a>
+            <a href="#" className="hover:text-foreground">
+              Privacy
+            </a>
+            <a href="#" className="hover:text-foreground">
+              Terms
+            </a>
           </div>
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-foreground/5 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <div>© {new Date().getFullYear()} {site.brand.name}. All rights reserved.</div>
-          <div className="inline-flex items-center gap-1.5"><Volume2 className="h-3 w-3" /> Made with Love for music.</div>
+          <div>
+            © {new Date().getFullYear()} {site.brand.name}. All rights reserved.
+          </div>
+          <div className="inline-flex items-center gap-1.5">
+            <Volume2 className="h-3 w-3" /> Made with Love for music.
+          </div>
         </div>
       </div>
     </footer>

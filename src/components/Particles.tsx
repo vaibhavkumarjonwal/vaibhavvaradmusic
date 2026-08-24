@@ -23,7 +23,7 @@ export function Particles({ count = 40 }: { count?: number }) {
         delay: Math.random() * 8,
         duration: 6 + Math.random() * 10,
         purple: Math.random() > 0.5,
-      }))
+      })),
     );
   }, [count]);
 
@@ -38,13 +38,9 @@ export function Particles({ count = 40 }: { count?: number }) {
             top: `${d.top}%`,
             width: d.size,
             height: d.size,
-            background: d.purple
-              ? "oklch(0.62 0.24 300)"
-              : "oklch(0.82 0.15 210)",
+            background: d.purple ? "oklch(0.62 0.24 300)" : "oklch(0.82 0.15 210)",
             boxShadow: `0 0 ${d.size * 6}px ${
-              d.purple
-                ? "oklch(0.62 0.24 300)"
-                : "oklch(0.82 0.15 210)"
+              d.purple ? "oklch(0.62 0.24 300)" : "oklch(0.82 0.15 210)"
             }`,
             animationDelay: `${d.delay}s`,
             animationDuration: `${d.duration}s`,

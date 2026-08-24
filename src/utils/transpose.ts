@@ -1,17 +1,4 @@
-const notes = [
-  "C",
-  "C#",
-  "D",
-  "D#",
-  "E",
-  "F",
-  "F#",
-  "G",
-  "G#",
-  "A",
-  "A#",
-  "B",
-];
+const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
 export function transposeChord(chord: string, steps: number) {
   const match = chord.match(/^[A-G](#|b)?/);

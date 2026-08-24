@@ -13,7 +13,7 @@ export default defineConfig({
     nitro(),
     react(),
     tailwindcss(),
-     svgr(),
+    svgr(),
   ],
   resolve: {
     tsconfigPaths: true,

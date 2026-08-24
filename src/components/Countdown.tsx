@@ -17,13 +17,8 @@ export function Countdown({ target }: { target: string }) {
     return (
       <div className="flex gap-3">
         {["Days", "Hours", "Min", "Sec"].map((label) => (
-          <div
-            key={label}
-            className="glass rounded-2xl px-4 py-3 text-center min-w-[70px]"
-          >
-            <div className="font-display text-2xl font-bold tabular-nums">
-              --
-            </div>
+          <div key={label} className="glass rounded-2xl px-4 py-3 text-center min-w-[70px]">
+            <div className="font-display text-2xl font-bold tabular-nums">--</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
               {label}
             </div>
@@ -50,10 +45,7 @@ export function Countdown({ target }: { target: string }) {
   return (
     <div className="flex gap-3">
       {items.map((i) => (
-        <div
-          key={i.label}
-          className="glass rounded-2xl px-4 py-3 text-center min-w-[70px]"
-        >
+        <div key={i.label} className="glass rounded-2xl px-4 py-3 text-center min-w-[70px]">
           <div className="font-display text-2xl font-bold tabular-nums">
             {String(i.value).padStart(2, "0")}
           </div>

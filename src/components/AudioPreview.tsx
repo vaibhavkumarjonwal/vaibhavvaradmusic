@@ -80,13 +80,17 @@ export function AudioPreview({ src, id, variant = "pill", className = "" }: Prop
 
   if (variant === "overlay") {
     return (
-    <div className={`relative flex h-full w-full items-center justify-center ${className}`}>
+      <div className={`relative flex h-full w-full items-center justify-center ${className}`}>
         <button
           onClick={toggle}
           aria-label={playing ? "Pause preview" : "Play 30 second preview"}
           className="grid h-14 w-14 place-items-center rounded-full bg-foreground text-background transition glow-purple hover:scale-105"
         >
-          {playing ? <Pause className="h-5 w-5 fill-black" /> : <Play className="h-5 w-5 fill-black" />}
+          {playing ? (
+            <Pause className="h-5 w-5 fill-black" />
+          ) : (
+            <Play className="h-5 w-5 fill-black" />
+          )}
         </button>
         <div className="glass absolute bottom-3 left-1/2 flex h-6 -translate-x-1/2 items-center rounded-full px-3">
           <span className="text-[9px] font-semibold uppercase tracking-widest text-white/80 tabular-nums">
@@ -111,7 +115,11 @@ export function AudioPreview({ src, id, variant = "pill", className = "" }: Prop
         style={{ width: `${progress * 100}%` }}
       />
       <span className="relative inline-flex items-center gap-2">
-        {playing ? <Pause className="h-3 w-3 fill-black" /> : <Play className="h-3 w-3 fill-black" />}
+        {playing ? (
+          <Pause className="h-3 w-3 fill-black" />
+        ) : (
+          <Play className="h-3 w-3 fill-black" />
+        )}
         {playing ? "Playing" : "Preview"}
       </span>
     </button>
